@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>commodity</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	.box0{
+		width: 1180px;
+		height: 100%;
+		margin: 0 auto;
+	}
+	.top{
+		height: 30px;
+		padding-left: 40px;
+		padding-top: 12px;
+	}
+	.a1{
+		font-size: 10px;
+		color: #9a9791;
+		list-style: none;
+		margin-right: 345px;
+	}
+	.top li{
+		list-style: none;
+		float: left;
+	}
+	.top li a{
+		margin-right: 14px;
+		text-decoration: none;
+		color: #9a9791;
+		font-size: 12px;
+	}
+	.top li p{
+		color: #fe6c00;
+		font-weight: bold;
+	}
+	.box1{
+		width: 1180px;
+		height: 100%;
+		position: relative;
+	}
+	.b1{
+		float: left;
+		padding-left: 40px;
+		padding-right: 80px;
+	}
+	.b2{
+		float: left;
+		width: 475px;
+		height: 40px;
+		border: 4px solid #fe6700;
+		border-radius: 3px;
+		margin-top: 16px;
+		margin-right: -5px;
+	}
+	.b3{
+		width: 80px;
+		height: 48px;
+		background: #fe6700;
+		border: 4px solid #fe6700;
+		border-radius: 4px;
+		color: white;
+		text-align: center;
+		font-size: 15px;
+		position: absolute;
+		margin-top: 16px;
+		outline: 0 none;
+	}
+	.b4{
+		padding-left: 167px;
+		margin-top: 19px;
+	}
+	.b5{
+		margin-left: -5px;
+	}
+	.b6{
+		margin-left: -5px;
+	}
+	.refer{
+		padding-left: 274px;
+		padding-top: 10px;
+	}
+	.refer li{
+		float: left;
+		list-style: none;
+		padding: 0 7px;
+		background: url(任务所需小图/img/shuxian.jpg) no-repeat right center;
+	}
+	.refer li a{
+		display: block;
+		text-decoration: none;
+		font-size: 12px;
+	}
+	.c1{
+		color: #ff0000;
+	}
+	.c2{
+		color: #666560;
+	}
+	.c3{
+		color: #aca9d3;
+	}
+	.c4{
+		color: #666560;
+		background: none;
+	}
+	.blacky{
+		margin-top: 5px;
+		margin-bottom: 10px;
+		float: left;
+		width: 100%;
+	}
+	.blacky li{
+		float: left;
+		list-style: none;
+	}
+	.d1{
+		height: 40px;
+		width: 144px;
+		color: white;
+		background-color: #fe0d4a;
+		text-align: center;
+		line-height: 39px;
+	}
+	.d2{
+		height: 40px;
+		width: 122px;
+		line-height: 39px;
+		color: white;
+		background-color: black;
+		text-align: center;
+	}
+	.d4{
+		height: 40px;
+		width: 18px;
+		line-height: 39px;
+		background-color: black;
+	}
+	.navigation{
+		font-size: 13px;
+		margin-left: 5px;
+	}
+	#leftbox{
+	width:400px;
+	position:absolute;
+	}
+	#showbox { 
+		background:#eee;
+		border: 1px solid #9a9791;
+	}
+	#slider{
+		width: 120px;
+		height: 120px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: #CCC;
+		opacity: 0.4;
+		cursor: move;
+		display: none;
+		filter: alpha(opacity=0);
+	}
+	.showpage {
+		 width:400px; 
+		 position:relative;
+	 }
+	.showpage a { 
+		display:block; 
+		width:15px; 
+		border:1px solid #ddd; 
+		height:60px; 
+		line-height:60px; 
+		background:#eee; 
+		text-align:center; 
+		font-size:18px; 
+		position:absolute; 
+		left:0; top:-62px; 
+		text-decoration:none; 
+		color:#999;}
+	.showpage a#shownext {
+		 left:auto; 
+		 right:0;
+	 }
+	.showpage a:hover {
+		 background:#ccc; 
+		 color:#777;
+	}
+/*中间*/
+	.centerbox{
+		width:580px;
+		height:575px;
+		position:absolute;
+		top:215px;
+		left:505px;
+		z-index:1;
+	}
+	.centerbox .imgname{
+		font-size:18px;
+		color:#000;
+		width:580px;
+		height:40px;		
+		margin-bottom:10px;
+	}
+	.centerbox p,.centerbox samp{
+		width:580px;
+		height:33px;
+		font-size:12px;
+		line-height:33px;
+		color:#666;
+		padding-left:10px;	
+	}
+	.centerbox .Aprice{
+		color:#D00;
+		font-size:20px;
+		font-weight:bold;
+	}
+	.centerbox .price{
+		font-size:14px;
+		text-decoration: line-through;
+	}
+	.centerbox ul{
+		margin-left:10px;
+		margin-top:15px;
+	}
+	.centerbox .shopimg{
+		width:49px;height:49px;
+	}
+	.centerbox .shopimg img{
+		margin:2px;
+	}
+	.centerbox .now{
+		background-color:#F90;
+	}
+	.chima li{
+		float: left;
+		list-style: none;
+	}
+	.hua{
+		float:left;
+		width:100px;
+		height:30px;
+		margin-right: 30px;
+		list-style: none;
+		font-size: 14px;
+	}
+	#h150ml{
+		width:70px;
+		height:30px;
+		border: 1px solid #fe0d4a;
+		background-image:url(任务所需小图/img/duigou.png);
+		background-color: white;
+		background-position:right bottom;
+		background-repeat:no-repeat;
+		list-style: none;
+	}
+	#h200ml{
+		width:70px;
+		height:30px;
+		border: 1px solid #fe0d4a;
+		background-image:url(任务所需小图/img/duigou.png);
+		background-color: white;
+		background-position:right bottom;
+		background-repeat:no-repeat;
+		list-style: none;
+	}
+	.xiaoliang{
+		margin-top: 45px;
+		margin-left: -103px;
+	}
+	#firstbuy{
+		margin-left: 20px;
+		color: #ff0754;
+		text-align:center;
+		width:190px;
+		height:50px;
+		text-decoration : none;
+		border-radius: 4px;
+		border:1px solid #ff0754;
+		background-color: white;
+	}
+	#secbuy{
+		margin-left: 20px;
+		text-align:center;
+		width:190px;
+		height:50px;
+		text-decoration : none;
+		background-color:#ff0754;
+		color:#fff;
+		border-radius: 4px;
+		border:1px solid #ccc;
+	}
+	.btn-numbox{
+		position: relative;
+		left: -270px;
+		top: 50px;
+	}
+	.btn-numbox li{
+		float: left;
+		list-style: none;
+	}
+	.num-jian{
+		margin-left: 90px;
+	}
+	.input-num{
+		width: 55px;
+		height: 30px;
+		text-align: center;
+	}
+	.num-jia{
+		margin-bottom: 35px;
+	}
+	.kucun{
+		font-size: 14px;
+		float: left;
+		position: relative;
+		left: 560px;
+		top: -30px;
+	}
+	#mychance{
+		margin-left: 86px;
+		color: black;
+	}
+	#mychance span{
+		font-size: 17px;
+		color: #ff9f00;
+	}
+/*右边*/
+	.rightbox{
+		width:150px;
+		height:632px;
+		position:absolute;
+		top:50;
+		right: 0;
+	}
+	.rightbox img{
+		margin-left:-130px;
+	}
+	.zhengpin{
+		width: 99%;
+		margin-top: 625px;
+		float: left;
+	}
+	.bottom_fir{
+		float: left;
+		position: relative;
+		left: 150px;
+		top: 910px;
+	}
+	.h1{
+		float: left;
+		margin-left: -160px;
+		margin-top: -890px;
+	}
+	.h2{
+		float: right;
+		margin-top: -900px;
+		margin-left: -35px;
+	}
+	.h3{
+		width: 850px;
+		margin-top: -900px;
+	}
+	.h4{
+		padding-left: -20px;
+		font-weight: 500;
+	}
+	.h3 tr td{
+		width: 140px;
+		height: 22px;
+		padding-top: 10px;
+		padding-left: 40px;
+		font-size: 13px;
+		color: #666560;
+	}
+	.bottom_sec li{
+		position: relative;
+		top: -680px;
+		left: 135px;
+		float: left;
+		list-style: none;
+		padding: 0 9px;
+		background: url(任务所需小图/img/shuxian.jpg) no-repeat right center;
+	}
+	.bottom_sec li a{
+		display: block;
+		text-decoration: none;
+		font-size: 13px;
+	}
+	.i1{
+		color: #666560;
+	}
+	.i2{
+		color: #666560;
+		background: none;
+	}
+	.j1{
+		color: #9a9791;
+		font-size: 12px;
+		text-align: center;
+		position: relative;
+		top: 80px;
+		left: -70px;
+		margin-top: 8px;
+	}
+	.lastbottom{
+		position: relative;
+		top: 350px;
+		margin-left: 210px;
+		float: left;
+	}
+	.lastbottom li{
+		list-style: none;
+		float: left;
+	}
+</style>
+</head>
+<body>
+	<div class="box0">
+		<ul class="top">
+			<li class="a1">帮5买，享帮帮</li>
+			<li>
+				<a href=""><img src="任务所需小图/img/common_min_qq.png" alt=""></a>
+			</li>
+			<li>
+				<a href=""><img src="任务所需小图/img/common_min_wechat.png" alt=""></a>
+			</li>
+			<li>
+				<a href=""><img src="任务所需小图/img/common_min_weibo.png" alt=""></a>
+			</li>
+			<li>
+				<a href="">登录&nbsp;&nbsp;&nbsp;注册</a>
+			</li>
+			<li>
+				<a href=""><img src="任务所需小图/img/common_min_letter.png" alt="">&nbsp;消息</a>
+			</li>
+			<li>
+				<a href=""><img src="任务所需小图/img/dingdan.jpg" alt="">&nbsp;我的订单</a>
+			</li>
+			<li>
+				<a href="">我的收藏</a>
+			</li>
+			<li>
+				<a href="">帮钻兑换</a>
+			</li>
+			<li>
+				<a href=""><img src="任务所需小图/img/phone.png" alt="">&nbsp;手机版</a>
+			</li>
+			<li>
+				<a href="">&nbsp;帮5淘&nbsp;&nbsp;&nbsp;客户服务</a>
+			</li>
+			<li>
+				<a href="">&nbsp;<img src="任务所需小图/img/gouwuche.jpg" alt="">&nbsp;购物车</a>
+			</li>
+			<li>
+				<p>&nbsp;0</p>	
+			</li>
+		</ul>
+		<div class="box1">
+			<a href=""><img src="任务所需小图/img/logo_03.jpg" alt="" class="b1"></a>
+			<input type="text" name="search" placeholder="输入商品网址或关键词，直通全网，快速帮5购！" class="b2">
+			<input type="button" value="搜全网" class="b3">
+			<input type="image" src="任务所需小图/img/tel.jpg" class="b4">
+			<input type="image" src="任务所需小图/img/mail.jpg" class="b5">
+			<input type="image" src="任务所需小图/img/ques.jpg" class="b6">
+		</div>
+		<ul class="refer">
+			<li><a href="" class="c1">洗发护发</a></li>
+			<li><a href="" class="c1">日本纸尿裤</a></li>
+			<li><a href="" class="c2">身体乳</a></li>
+			<li><a href="" class="c2">内衣文胸</a></li>
+			<li><a href="" class="c3">iphone 6s</a></li>
+			<li><a href="" class="c3">iPad Air2</a></li>
+			<li><a href="" class="c2">牛仔裤</a></li>
+			<li><a href="" class="c2">奶粉</a></li>
+			<li><a href="" class="c2">防晒霜</a></li>
+			<li><a href="" class="c4">伞</a></li>
+		</ul>
+		<ul class="blacky">
+			<li class="d1">首页</li>
+			<li class="d2">热门品牌</li>
+			<li class="d2">美妆个护</li>
+			<li class="d2">服饰鞋包</li>
+			<li class="d2">母婴生活</li>
+			<li class="d2">食品保健</li>
+			<li class="d2">韩国直邮</li>
+			<li class="d2">跨境购</li>
+			<li class="d3"><img src="任务所需小图/img/ff_03.jpg" alt=""></li>
+			<li class="d4"></li>
+		</ul>
+		<p class="navigation">首页>美容护肤/美体/精油>防晒>韩国 RE:CIPE 水晶清爽防水防晒喷雾SPF50 150ml/瓶</p>
+		<div id="box2">
+			<div id="leftbox">
+				<div id="showbox">
+					  <img id="img1" src="任务所需小图/img/pp0.jpeg" width="400" height="400" />
+					  <div id="slider"></div>
+					  <div id="img2">
+					  <img id="Bimg" src="任务所需小图/img/pp0.jpeg" width="1000" height="1000" /></div>
+				</div>
+			<p class="showpage">
+				<input type="image" src="任务所需小图/img/sp0.jpeg" width="60" height="60">
+				<input type="image" src="任务所需小图/img/sp1.jpeg" width="60" height="60">
+				
+			</p>
+        			<p class="showpage">
+ 				 <a href="javascript:void(0);" id="showlast"> < </a>
+  				 <a href="javascript:void(0);" id="shownext"> > </a>
+			</p>
+
+		</div>
+   		 <div class="centerbox">
+    			<p class="imgname">韩国 RE:CIPE 水晶清爽防水防晒喷雾SPF50 150ml/瓶</p>
+    			<p>价格：<samp class="Aprice">￥71</samp><samp class="price">￥ 150</samp></p>
+    			<img src="任务所需小图/img/ss_09.jpg" alt="">
+       		 	<ul  class="chima">
+       		 		<li class="hua">化妆品净含量</li>
+       		 		<li>
+       				 <input type="button" id="h150ml" value="150ml"></li>
+       				 <li>
+      				  <input type="button" id="h200ml" value="200ml"></li>
+        			</ul>
+        			<ul class="btn-numbox">
+				<li class="number">数量</li>
+				<li class="num-jian" id="num-jian"><img src="任务所需小图/img/X15.png" width="25" height="35"></li>
+				<li><form><input class="input-num" value="1" id="input-num"></form></li>
+				<li class="num_jia" id="num-jia"><img src="任务所需小图/img/16.png" width="25" height="35"></li>
+				<li class="kucun">（库存5件）</li>
+			</ul>
+       			 <img src="任务所需小图/img/oo_03.jpg" alt="" class="xiaoliang">
+       			 <p id="mychance">您已选择<span id="ml">&nbsp;"150ml"</span></p>
+       			 <input type="button" id="firstbuy" value="立即购买"><input type="button" id="secbuy" onclick="confirmDialog()"; value="加入购物车">
+   			<div class="clear"></div>
+  		  </div>
+  		 <div class="rightbox">
+    			<img src="任务所需小图/img/ww_07.jpg">
+  		  </div>
+  		  <img src="任务所需小图/img/zhengpin.jpg" alt="" class="zhengpin">
+	</div>
+	<div class="bottom_fir">
+			<img src="任务所需小图/img/loginB.jpg" alt="" class="h1">
+			<table class="h3">
+				<tr>
+					<th class="h4">购物指南</th>
+					<th class="h4">支付相关</th>
+					<th class="h4">售后服务</th>
+					<th class="h4">VIP服务</th>
+					<th class="h4">帮韩品</th>
+					<th class="h4">更多</th>
+				</tr>
+				<tr>
+					<td>如何下单</td>
+					<td>支付方式</td>
+					<td>取消订单</td>
+					<td>VIP优惠</td>
+					<td>韩国正品</td>
+					<td>手机APP</td>
+				</tr>
+				<tr>
+					<td>帮5购流程</td>
+					<td>安全设置</td>
+					<td>申请售后</td>
+					<td>如何成为VIP</td>
+					<td>闪电发货</td>
+					<td>帮5采APP</td>
+				</tr>
+				<tr>
+					<td>订单查询</td>
+					<td>账户信息</td>
+					<td>退货流程</td>
+					<td>超级帮钻</td>
+					<td>帮韩品售后</td>
+					<td>帮5淘插件</td>
+				</tr>
+				<tr>
+					<td>物流配送</td>
+					<td></td>
+					<td>退款相关</td>
+					<td></td>
+					<td></td>
+					<td>其他</td>
+				</tr>
+			</table>
+			<img src="任务所需小图/img/erweima.jpg" alt="" class="h2">
+			<ul class="bottom_sec">
+				<li><a href="" class="i1">关于帮5买</a></li>
+				<li><a href="" class="i1">联系我们</a></li>
+				<li><a href="" class="i1">合作商家</a></li>
+				<li><a href="" class="i1">友情链接</a></li>
+				<li><a href="" class="i1">加入我们</a></li>
+				<li><a href="" class="i1">移动应用</a></li>
+				<li><a href="" class="i1">热门</a></li>
+				<li><a href="" class="i1">广告联盟</a></li>
+				<li><a href="" class="i2">使用条款</a></li>
+			</ul>
+			<p class="j1">Copyright © 2011-2015 B5M.COM.All rights reseerved.Powered by B5Msoft Co.,Ltd</p>
+			<p class="j1">增值电信业务经营许可证：沪B2-20130065号 | 中华人民共和国互联网药品信息服务资格证书（沪）-非经营性-2013-0034沪卫(中医)网审【2015】10032号 沪ICP备11034776号-3|食品流通许可证</p>
+			<p class="j1">SP3101151410301755</p>
+		</div>
+		<ul class="lastbottom">
+			<li><img src="任务所需小图/img/bo1.gif" alt=""></li>
+			<li><img src="任务所需小图/img/bo2.png" alt=""></li>
+			<li><img src="任务所需小图/img/bo3.gif" alt=""></li>
+			<li><img src="任务所需小图/img/bo4.png" alt=""></li>
+			<li><img src="任务所需小图/img/bo5.png" alt=""></li>
+			<li><img src="任务所需小图/img/bo6.png" alt=""></li>
+			<li><img src="任务所需小图/img/bo7.png" alt=""></li>
+		</ul>
+	<script>
+		//商品数量
+		var num_jia=document.getElementById("num-jia");
+		var num_jian=document.getElementById("num-jian");
+		var input_num=document.getElementById("input-num");
+		num_jia.onclick=function(){
+			if(input_num.value>=5){
+				input_num.value=5;
+			}else{
+				input_num.value=parseInt(input_num.value)+1;
+			}
+		}
+		num_jian.onclick=function(){
+			if(input_num.value<=0){
+				input_num.value=0;
+			}else{
+				input_num.value=parseInt(input_num.value)-1;
+			}
+		}
+		//选择
+		var h150ml = document.getElementById("h150ml");
+		var h200ml = document.getElementById("h200ml");
+		var ml = document.getElementById("ml");
+		h150ml.onclick=function(){
+			h150ml.setAttribute('style', "border: 1px solid #fe0d4a;");
+			h200ml.setAttribute("style", "border: solid 1px white;background: none;");
+			ml.innerHTML="150ml";
+		}
+		h200ml.onclick=function(){
+			h200ml.setAttribute('style', "border: 1px solid #fe0d4a;background: url('任务所需小图/img/duigou.png') no-repeat 51px 14px;");
+			h150ml.setAttribute("style", "border: solid 1px white;background: none;");
+			ml.innerHTML="200ml";
+		}
+		//放大镜
+		var img1 = document.getElementById("img1");
+		var img2 = document.getElementById("img2");
+		var slider = document.getElementById("slider");
+		var Bimg = document.getElementById("Bimg");
+		var box = document.getElementById('showbox'); 
+		img1.onmouseover=function(){
+	  	 slider.style.display='block';
+			img2.style.display='block';
+ 		}
+		img1.onmouseout=function(){
+	 	  slider.style.display='none';
+			img2.style.display='none';
+ 		}
+  
+   		 img1.onmousemove=function(ev){
+			var ev=ev||event;
+		  
+			var oL=ev.clientX-box.offsetLeft-slider.offsetWidth/2;
+			var oT=ev.clientY-box.offsetTop-slider.offsetHeight/2;
+		  
+			var oMaxw=img1.offsetWidth-slider.offsetWidth;
+			var oMaxh=img1.offsetHeight-slider.offsetHeight;
+		  
+			oL=oL>oMaxw?oMaxw:oL<0?0:oL;
+			oT=oT>oMaxh?oMaxh:oT<0?0:oT;
+		
+			slider.style.left = oL+'px';
+			slider.style.top = oT+'px' ;
+		
+			var oBmaxw = img2.offsetWidth - Bimg.offsetWidth; 
+			var oBmaxh = img2.offsetHeight - Bimg.offsetHeight; 
+			Bimg.style.left = ( oL/oMaxw ) * oBmaxw + 'px'
+			Bimg.style.top = ( oT/oMaxh ) * oBmaxh + 'px'
+	}
+
+	</script>
+</body>
+</html>
